@@ -3,7 +3,7 @@
 --accent:#ffa844; 
 --ink:#313715; 
 --paper:#fff; 
---surface:#ddd8c4; 
+--surface:#ede8d0; 
 --max:70rem; 
 --space:1rem;
 --radius: .5rem;
@@ -29,7 +29,6 @@ h1, h2, h3 {
     margin: 0 auto;
     padding: 0 1rem;
     line-height: 1;
-    text-align:eft;
 }
 .brand { color:inherit; font-size:1.25rem; font-weight:700; }
 .menu-button { 
@@ -61,28 +60,34 @@ h1, h2, h3 {
 .nav-list a[aria-current="page"] { font-weight:700;
 
 }
-/* TODO: hover, focus-visible, active, and aria-current styles. */
-/* TODO: hide only the enhanced, collapsed narrow list. */
+.news{
+    background: var(--surface)
+}
 
 main, footer { width:min(100% - 2rem,var(--max)); margin-inline:auto; }
 main { min-height:55vh; padding-block:2rem; }
 main a {}
 /* TODO: add the relative-unit breakpoint justified in navigtion-plan.html. */
 .promo{
-    background: var(--surface); border-left: .3rem solid var(--brand); padding:1rem; border-radius: var(--radius);
+    display: inline-block; background: var(--surface); border-left: .3rem solid var(--brand); padding:1rem; border-radius: var(--radius);
 }
 .card-grid {
+    gap: 1rem;
     list-style: none;
     padding: 0;
     display:grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    border-color: #8C92AC;
 }
 .card {
-    border: 1px solid ##84b59f;
+    padding: .2rem;
+    border: 1px solid #fff;
     border-radius:var(--radius);
     padding: 1rem;
-    background: var(--paper);
+    border-color:#8C92AC ;
+    border-width:1px;
+
 }
 footer { border-top: .25rem solid var(--accent);}
 @media(min-width: 66em) {
