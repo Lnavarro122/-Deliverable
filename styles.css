@@ -46,13 +46,14 @@ border-radius: var(--radius);
 .skip-link:focus { top:.5rem; outline: .25rem solid var(--ink) }
 
 .contact-bar{
-background: var(--ink);}
-
-.contact-bar .quick-heading {
+background: var(--ink);
+text-align: right;
 display: flex;
 justify-content: flex-end;
 margin: 0;
+padding: 0.5rem;
 }
+
 .contact-bar a{
     display: flex;
     align-items: center;
@@ -172,8 +173,9 @@ border-radius:var(--radius);
 }
 .promo{
 background: var(--surface);
-border-left: .3rem solid var(--brand);
+border: 1rem dashed var(--ink);
 padding:1rem;
+font-weight:bold;
 border-radius: var(--radius);
 
 }
@@ -187,11 +189,9 @@ border-radius: var(--radius);
 }
 .card {
     display:grid;
-    border: 1px solid #fff;
-    border-radius:var(--radius);
     padding: 1rem;
     background: var(--surface);
-    border-left:.3rem solid var(--brand);
+    border: .5rem dashed var(--ink);
     border-radius:var(--radius);
     gap:1em;
 }
