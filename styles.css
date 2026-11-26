@@ -7,7 +7,7 @@
 --max:70rem; 
 --space:1rem;
 --radius: .5rem;
---target: 2.5
+--target: 2.5rem;
 
  }
 * { box-sizing:border-box; }
@@ -21,11 +21,11 @@ body {
 margin:0;
 color:var(--ink);
 background:var(--paper); 
-font-family: system-ui, -apple-system, "Segoe UI", Roboto; line-height: 1.5;
+font-family: system-ui, -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
 line-height: 1.5;
 }
 h1{
-    font-size: clamp(1.75rem, 1.2rem + 2vw);
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
 
 }
 h1, h2, h3 {
@@ -47,7 +47,6 @@ border-radius: var(--radius);
 
 .contact-bar{
 background: var(--ink);
-text-align: right;
 display: flex;
 justify-content: flex-end;
 margin: 0;
@@ -83,7 +82,7 @@ padding:1rem;
 }
 .brand { 
 color:inherit;    
-font-family: serif, "Times New Roman";
+font-family: "Times New Roman", serif;
 font-size:1.5rem; 
 font-weight:700;
 text-decoration: none;
@@ -103,14 +102,14 @@ text-decoration: none;
  cursor: pointer;
 }
 
-    /* TODO: native button appearance, focus, and comfortable target. */ 
+    
 .menu-button:hover { background:var(--paper);}
-.menu-button:focus-visible { outline: .2rem solid var(--ink); outline-offset: .2rem;
+.menu-button:focus-visible { outline: .2rem solid var(--ink); outline-offset: .2rem;}
 .menu-button[aria-expanded="true"] {
     background: var(--surface);
 
 }
-}
+
 .nav-list { 
 list-style: none;
 margin: 0;
@@ -123,7 +122,6 @@ min-height: 2.75rem;
 color:var(--ink); 
 padding:.75rem; 
 overflow-wrap: anywhere;
-transition: margin-right 2s ease-in-out;
 }
 .nav-list a:hover {
 background: var(--surface);
@@ -160,7 +158,7 @@ border-radius:var(--radius);
 }
 .page-section:target {
     background:var(--surface);
-    outline:.6rem;
+    outline: solid var(--surface);
 
 }
 .trail-table {
@@ -184,7 +182,6 @@ border-radius: var(--radius);
     list-style: none;
     padding: 0;
     display:grid;
-    gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 .card {
@@ -198,6 +195,8 @@ border-radius: var(--radius);
 .deal{
     justify-self:start;
     background:var(--accent);
+    border-radius: var(--radius);
+    padding: .6rem;
 }
 .card h3, .card p{
     margin: 0; 
@@ -208,6 +207,7 @@ footer { border-top: .25rem solid var(--accent);}
 .wrapper{
     display:flex;
     align-items: center;
+    justify-content: space-between;
 }
 .nav-list a[aria-current="page"] {
     border-left:none;
