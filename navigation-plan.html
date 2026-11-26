@@ -28,9 +28,6 @@
 <p>#hours, #bring, #accessibility - visit.html</p>
 <p>#rules, #report, #contact - support.html</p>
 <p>"A write us a message" that links to email on every page on the top right corner.</p>
-
-
-
 </table>nks and pages were consistent.
 
 <h2>2. Breakpoint evidence</h2><p><strong>Method and widths tested:</strong> My first Method test I did was use the iphone layout and started to go wider through to 1200.</p><p><strong>First content failure:</strong> At 912 the Get involved section dropped down to the second row.</p><p><strong>Chosen breakpoint in relative units:</strong> I added @media (min-width: 66em). em grows with the text so there wasn't an excess screen </p><p><strong>Long-label and zoom retest:</strong> I tested the Trail Guide with a much longer name and saw the words fit to the screen and didn't cut off.</p>
@@ -42,9 +39,89 @@
 <tr><td>JavaScript unavailable</td><td>The menu remains hidden until the layout is widescreen.</td><td>Menu didn't appear because Javascript had typo in the addeventlistener page.</td><td>Passed. I fixed the addeventlistener sections so I saw the menu at a narrow screen./td></tr>
 <tr><td>CSS unavailable / wide recovery</td><td>Expected: To first see the button at narrow and widen the layout so the'yre hidden.</td><td>Menu button showed in narrow and left in wide.</td><td>Passed</td></tr></table><p><strong>Screenshot filenames and what each proves:</strong> [Response]</p>
 
-<h2>4. Peer task test</h2><p><strong>Tester relationship</strong> Girlfriend</p><p><strong>Two tasks attempted:</strong> First they saw how the menu button changes between narrow and wide screens. Task 1: Check the restaurants for food week. Task 2: Check the hours and contact page for the visitors center.</p><p><strong>What the tester did or said:</strong> Showed me typos that I had as well as the wrong address linked where the phone number is supposed to be.</p><p><strong>Change made or justified:</strong> I fixed the typos such as "Marsh mallow" and I adjusted the correct phone number.</p>
+<h2>4. Peer task test</h2><p><strong>Tester relationship</strong> Girlfriend</p><p><strong>Two tasks attempted:</strong> First they saw how the menu button changes between narrow and wide screens. Task 1: Check the restaurants for food week. Task 2: Check the hours and contact page for the visitors center.</p><p><strong>What the tester did or said:</strong> Showed me typos that I had as well as the wrong address linked where the phone number is supposed to be. I also had MenuFunction(false;) incorrect.</p><p><strong>Change made or justified:</strong> I fixed the typos such as "Marsh mallow" and I adjusted the correct phone number. I fixed the MenuFunction as well in Javascript.</p>
 
-<h2>5. JavaScript code defense</h2><p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to the exact variable, attribute, dataset value, function, and event used.</p><p>[Response]</p>
+<h2>5. JavaScript code defense</h2><p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to the exact variable, attribute, dataset value, function, and event used.</p>
+<p>The menu button and navSection are <strong>initialized </strong>at the top of the script and because button is hidden it wont show with Javascript when it is off. button.hidden = false and MenuOpen(false) help so the menu is loaded correctly.</p>
+<p>MenuOpen(open) is a function creates <strong>state synchronization</strong> between aria-expanded and data-state. The screen reads if it is open for aria-expanded and data-state is linked to the CSS and tells it if it is open or closed. This function connects the two.</p>
+<p>Aria expanded is set to true when you "click"on the menu button.This creates <strong>activation </strong> when openIt checks if it is true or not.</p>
+<p><strong>Escape</strong> happens when you press escape on the keyboard. The "keydown" will check if key ===escape is true and close it. button.focus will highlight which link you currently are visiting and have clicked on.</p>
+<h2>6. AI disclosure</h2><p><strong>Tool and purpose, or none:</strong> Claude </p><p><strong>Prompt/task:</strong> 1. What are examples that would be on a park website such as common questions, help and contact, events, etc. 2. Give ideas of what kind of fictional community Lake City Trails could be. Ideas of a town layout local eateries with a food week coupon, etc</p>
+<p>Claude response: Most park websites follow a similar setup. These are the sections and sample content they usually have:
 
-<h2>6. AI disclosure</h2><p><strong>Tool and purpose, or none:</strong> [Response]</p><p><strong>Prompt/task:</strong> [Response]</p><p><strong>Accepted, changed, or rejected output:</strong> [Response]</p><p><strong>How I verified it:</strong> [Tests and sources]</p>
+Common questions (FAQ)
+
+What are the park hours?
+Is there an entrance or parking fee?
+Are dogs allowed? Do they need to be leashed?
+Can I reserve a picnic shelter or pavilion?
+Are the trails wheelchair or stroller accessible?
+Is alcohol, grilling, or drone use allowed?
+Where are the restrooms, and are they open year-round?
+Is fishing, swimming, or camping permitted? Do I need a permit?
+
+Help & contact
+
+Phone number, email, and office hours
+Contact form (name, email, subject, message)
+Address with a map or directions link
+How to report a problem (broken equipment, trail damage, lost and found)
+Emergency info (911, park ranger line)
+Accessibility requests
+
+Events
+
+Guided nature walks or bird-watching tours
+Summer concerts or movie nights in the park
+Seasonal festivals (fall harvest fest, winter lights)
+Volunteer cleanup days or tree planting
+Kids' programs (nature camp, story time)
+Fitness classes (outdoor yoga, 5K runs)
+
+Other common pages
+
+Visit / Plan Your Trip: hours, fees, directions, parking
+Things to Do: trails, playgrounds, sports fields, water activities
+Maps: trail maps and facility maps you can download
+Reservations: shelters, campsites, event spaces
+Rules & Regulations: park policies and safety guidelines
+Alerts: closures, weather warnings, trail conditions
+About: park history, wildlife, mission
+Get Involved: volunteering, donations, membership
+Photo Gallery</p>
+<p>2 Claude response: Concept: a lakeside trail town
+Lake City is a small town in the Midwest built around Crescent Lake. It used to be a lumber and railroad stop, and the old rail lines are now the trail system. Locals call it "where the trails meet the table."
+
+Town layout
+
+North Shore: trailheads, the visitor center, and campgrounds
+Depot District (downtown): the restored train depot, shops, and most of the restaurants
+Harbor Walk: the marina, kayak rentals, and a lakefront boardwalk
+Pinecrest Ridge: the hardest trails and a scenic overlook
+Old Mill Park: picnic shelters, a playground, and the summer concert stage
+Willow Marsh: a boardwalk nature trail with bird-watching blinds
+
+Local eateries
+
+Trailhead Coffee Co.: espresso, breakfast burritos, and grab-and-go trail snacks
+The Depot Diner: a classic diner in an old train car
+Crescent Lake Fish Fry: walleye baskets and a Friday fish fry
+Ridge Rock Pizza: wood-fired pizza after a long hike
+Marsh Mallow Creamery: ice cream and s'mores milkshakes
+Lumberjack Smokehouse: BBQ with picnic-table seating
+Harbor Taco Shack: a walk-up taco window by the marina
+
+Lake City Food Week coupons
+
+Trailhead Coffee: free pastry with any coffee
+Depot Diner: $2 off any breakfast combo
+Fish Fry: kids eat free on Friday with an adult meal
+Ridge Rock Pizza: 15% off any large pizza
+Creamery: buy one cone, get one half off
+Smokehouse: free side with any platter
+Trail Passport: get a stamp from 5 eateries to enter a drawing for a gift basket </p>
+<p><strong>Accepted, changed, or rejected output:</strong> I accepted the name for some of the eateries and was able to get a feel of the town with this. I rejected the common questions section.</p><p><strong>How I verified it:</strong> I was able to use these in my website and verified it accordingly with validator. </p>
+<h2>Screenshots & explanation</h2>
+<p>Screenshot 1: This was tested at 920px and tested the wide screen where my menu button didn't load previous to this.</p>
+<p>Screenshot 2: When I had the peer test this was how I tested it. From an Iphone layout and clicking in the menu to go to foodweek</p>
 </body></html>

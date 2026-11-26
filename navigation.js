@@ -10,7 +10,7 @@ function MenuOpen(open) {
     button.setAttribute("aria-expanded", open ? "true" : "false");
     navSection.dataset.state = open ? "open": "closed";
 }
-// This button is so the menu bbutton can show.
+// This button is so the menu button can show.
 //hidden hides button so with it being false, the button appears
 button.hidden = false;
 MenuOpen(false);
