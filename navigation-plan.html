@@ -1,9 +1,50 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Navigation Plan and Evidence</title><style>body{max-width:75rem;margin:auto;padding:1rem;font:1rem/1.5 Arial,sans-serif}h1,h2{color:#8c1d40}table{width:100%;border-collapse:collapse}th,td{border:1px solid #999;padding:.55rem;text-align:left;vertical-align:top}th{background:#8c1d40;color:#fff}</style></head><body>
-<h1>Navigation Plan and Evidence</h1><p><strong>Student:</strong> [Name] &nbsp; <strong>Site:</strong> [Site name and purpose]</p>
-<h2>1. Priority tasks and content inventory</h2><ol><li>[Task]</li><li>[Task]</li><li>[Optional task]</li></ol><table><tr><th>Destination</th><th>Final label</th><th>Order/group rationale</th></tr><tr><td>[Destination]</td><td>[Label]</td><td>[Rationale]</td></tr></table>
-<h2>2. Breakpoint evidence</h2><p><strong>Method and widths tested:</strong> [Response]</p><p><strong>First content failure:</strong> [What happened and at what width?]</p><p><strong>Chosen breakpoint in relative units:</strong> [Response]</p><p><strong>Long-label and zoom retest:</strong> [Observed result and repair]</p>
-<h2>3. Interaction and failure test record</h2><table><tr><th>Condition</th><th>Expected</th><th>Observed</th><th>Result and repair</th></tr><tr><td>Keyboard: button, Tab, Escape, focus</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>Pointer/touch targets</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>320px and breakpoint region</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>200% zoom</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>JavaScript unavailable</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr><tr><td>CSS unavailable / wide recovery</td><td>[Expected]</td><td>[Observed]</td><td>[Pass/fail and repair]</td></tr></table><p><strong>Screenshot filenames and what each proves:</strong> [Response]</p>
-<h2>4. Peer task test</h2><p><strong>Tester relationship (no name needed):</strong> [Response]</p><p><strong>Two tasks attempted:</strong> [Response]</p><p><strong>What the tester did or said:</strong> [Direct observation]</p><p><strong>Change made or justified:</strong> [Response]</p>
+<h1>Navigation Plan and Evidence</h1><p><strong>Student:</strong> Luis Navarro &nbsp; <strong>Site:</strong> Lake City Trails website. This site helps guests plan their future trip, community members plan for monthly events such as food week, checking to see the current status on trails and more. </p>
+<h2>1. Priority tasks and content inventory</h2><ol><li>Check the status on trails and making it easy for visitors to pick between 6 of the trails by providing difficulty and length of trail.</li><li>Help and supporting site visitors by providing hours and contact information, toy drive information, and what they should do if they encounter a tree in the trail path. </li><li>Find date and time on community event. Learn about food week, including all local restaurants involved. Quick links that are common questions between community members, these links help navigate members quicker. </li></ol>
+<table><tr><th>Destination</th><th>Final label</th><th>Order/group rationale</th></tr>
+<tr><td>index.html</td>
+<td>Home</td>
+<td>First on page because it serves as a welcome and provides quick links to sections. </td></tr>
+<tr><td>visit.html#trails</td>
+<td>Trail guide</td>
+<td>Trails are a popular part of Lake City and has garnered a lot of interest so it is the second task on the site..</td></tr>
+<tr><td>visit.html</td>
+<td>Plan your visit</td>
+<td>This is third in order and has 6 sections for visitors planning a visit. 2 of the sections have their own destination link because of popularity</td></tr>
+<tr><td>index.html#events</td>
+<td>Events</td>
+<td>An event page with events. This is dedicated to community members so it is less popular than the first three links.</td></tr>
+<tr><td>visit.html#food-week</td>
+<td>Food Week</td>
+<td>This is a limited time promo that get's their own navigation in the visit.html section.</td></tr>
+<tr><td>support.html</td>
+<td>Help & Contact</td>
+<td>Task 3 is provides important information for site visitors they should read before visiting.</td></tr>
+<tr><td>support.html#volunteer</td>
+<td>Get Involved</td>
+<td>This section is dedicated to community members and is last on the list. It is also in support.html.</td></tr>
+<h2>Extra sections</h2>
+<p>#mission, Quick links - index.html</p>
+<p>#hours, #bring, #accessibility - visit.html</p>
+<p>#rules, #report, #contact - support.html</p>
+<p>"A write us a message" that links to email on every page on the top right corner.</p>
+
+
+
+</table>nks and pages were consistent.
+
+<h2>2. Breakpoint evidence</h2><p><strong>Method and widths tested:</strong> My first Method test I did was use the iphone layout and started to go wider through to 1200.</p><p><strong>First content failure:</strong> At 912 the Get involved section dropped down to the second row.</p><p><strong>Chosen breakpoint in relative units:</strong> I added @media (min-width: 66em). em grows with the text so there wasn't an excess screen </p><p><strong>Long-label and zoom retest:</strong> I tested the Trail Guide with a much longer name and saw the words fit to the screen and didn't cut off.</p>
+<h2>3. Interaction and failure test record</h2><table><tr><th>Condition</th><th>Expected</th><th>Observed</th><th>Result and repair</th></tr>
+<tr><td>Keyboard: button, Tab, Escape, focus</td><td>Write us a message link in the top right corner.</td><td>I observed the write us a message take the place for the menu button.</td><td>Passed. The repair was to take the contact bar out of the heading class becaus was mixing upo with the menu. I made another div class instead.  </td></tr>
+<tr><td>Pointer/touch targets</td><td>The menu button to appear and when expanded 7 links appear.</td><td>I noticed that my var(--target) wasn't being activated and the rem was off.</td><td>passed. I didn't have any units at first, but added it after.</td></tr>
+<tr><td>320px and breakpoint region</td><td>The expected here should be to have content being thinner and fitting to the page.</td><td>My trail table was being cut off on the right side. It then pushed it down to the next line.</td><td>I changed some of the sizings and I shortened one of the headings to status</td></tr>
+<tr><td>200% zoom</td><td>Expected a menu at narrow layout.</td><td>The navigation links remained in the narrow menu layout</td><td>This Passed</td></tr>
+<tr><td>JavaScript unavailable</td><td>The menu remains hidden until the layout is widescreen.</td><td>Menu didn't appear because Javascript had typo in the addeventlistener page.</td><td>Passed. I fixed the addeventlistener sections so I saw the menu at a narrow screen./td></tr>
+<tr><td>CSS unavailable / wide recovery</td><td>Expected: To first see the button at narrow and widen the layout so the'yre hidden.</td><td>Menu button showed in narrow and left in wide.</td><td>Passed</td></tr></table><p><strong>Screenshot filenames and what each proves:</strong> [Response]</p>
+
+<h2>4. Peer task test</h2><p><strong>Tester relationship</strong> Girlfriend</p><p><strong>Two tasks attempted:</strong> First they saw how the menu button changes between narrow and wide screens. Task 1: Check the restaurants for food week. Task 2: Check the hours and contact page for the visitors center.</p><p><strong>What the tester did or said:</strong> Showed me typos that I had as well as the wrong address linked where the phone number is supposed to be.</p><p><strong>Change made or justified:</strong> I fixed the typos such as "Marsh mallow" and I adjusted the correct phone number.</p>
+
 <h2>5. JavaScript code defense</h2><p>Explain initialization, state synchronization, activation, and Escape/focus behavior in your own words. Refer to the exact variable, attribute, dataset value, function, and event used.</p><p>[Response]</p>
+
 <h2>6. AI disclosure</h2><p><strong>Tool and purpose, or none:</strong> [Response]</p><p><strong>Prompt/task:</strong> [Response]</p><p><strong>Accepted, changed, or rejected output:</strong> [Response]</p><p><strong>How I verified it:</strong> [Tests and sources]</p>
 </body></html>

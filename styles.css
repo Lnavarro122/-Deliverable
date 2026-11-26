@@ -195,7 +195,6 @@ border-radius: var(--radius);
 .deal{
     justify-self:start;
     background:var(--accent);
-    border-radius: var(--radius);
     padding: .6rem;
 }
 .card h3, .card p{
